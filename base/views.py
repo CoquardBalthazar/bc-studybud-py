@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from .models import Room
 
+'''
 rooms = [
     {'id':1, 'name' : 'Lets learn Python'},
     {'id':2, 'name' : 'Design with me'},
     {'id':3, 'name' : 'Frontends developpers'},
 ]
+'''
 
 
 def home(request):
