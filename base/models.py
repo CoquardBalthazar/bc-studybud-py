@@ -17,7 +17,10 @@ class Room(models.Model):
     description = models.TextField(null=True, blank=True)
     #participants =
     updated = models.DateTimeField(auto_now=True)
-    created = models.DateTimeField(auto_now_add=False)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-updated', '-created'] #without dash = first one first, newest one last --> thats why we inverted it
 
     def __str__(self):
         return self.name
